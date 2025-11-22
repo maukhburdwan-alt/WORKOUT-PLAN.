@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Workout Planner</title>
+  <link rel="stylesheet" href="WORKOUT.css">
+</head>
+<body>
+
+<h2> Workout Planner</h2>
+<p>MAKE YOUR WORKOUT PLAN WITH OUR HELP!</p>
+
+<h3>Enter Your Details</h3>
+<label>Your Name</label><br>
+<input id="name"><br><br>
+
+<label>Your Goal</label><br>
+<select id="goal">
+  <option value="fitness">General Fitness</option>
+  <option value="weightloss">Weight Loss</option>
+  <option value="muscle">Muscle Gain</option>
+</select><br><br>
+
+<label>Days per week</label><br>
+<select id="days">
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+
+<button onclick="makePlan()">Generate Plan</button>
+
+<hr>
+<div id="planBox" style="display:none;">
+  <h3>Your Workout Plan</h3>
+  <div id="plan"></div>
+</div>
+
+<script>
+
+const EX = {
+  fitness:["Push-ups","Squats","Plank","Jogging"],
+  weightloss:["Jumping Jacks","Burpees","High Knees","Mountain Climbers"],
+  muscle:["Push-ups","Squats","Lunges","Dips"]
+};
+
+function makePlan(){
+  let name = document.getElementById('name').value || "Friend";
+  let goal = document.getElementById('goal').value;
+  let days = parseInt(document.getElementById('days').value);
+
+  let list = EX[goal];
+  let output = "<p><strong>Hello " + name + "</strong>, here is your plan:</p>";
+
+  for(let d=1; d<=days; d++){
+    output += "<p><strong>Day " + d + "</strong><br>";
+    output += list[0] + "<br>" + list[1] + "<br>" + list[2];
+    output += "</p>";
+  }
+
+  document.getElementById('plan').innerHTML = output;
+  document.getElementById('planBox').style.display = "block";
+}
+</script>
+
+</body>
+</html>
