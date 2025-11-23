@@ -1,40 +1,101 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+/* Dark Theme CSS */
+
+/* Body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background:rgb(200, 200, 23);
-  color: #222;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 20px;
+  background-color: #0d1117; /* deep dark */
+  color: #e6e6e6;  /* soft white */
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #58a6ff; /* soft blue */
+  margin-bottom: 20px;
 }
 
 h2 {
-  margin: 0 0 6px 0;
+  color: #58a6ff;
+  border-bottom: 2px solid #58a6ff;
+  padding-bottom: 5px;
+  margin-top: 30px;
 }
 
-p { margin: 6px 0 12px 0; }
-
-label { display: block; margin-top: 10px; font-weight: bold; }
-
-input, select {
-  padding: 8px;
-  margin-top: 4px;
-  width: 300px;
-  box-sizing: border-box;
+/* Text styling */
+p, ul, li {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-button {
-  margin-top: 12px;
-  padding: 8px 12px;
-  background: #007bff;
+/* Lists */
+ul {
+  background: #161b22;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+/* Paragraphs */
+p {
+  background: #161b22;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+  margin: 10px 0;
+}
+
+/* Main Container */
+.container {
+  max-width: 950px;
+  margin: auto;
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.08);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #238636; /* green accent */
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
+.btn:hover {
+  background-color: #2ea043; /* brighter green */
+}
 
-button:hover { opacity: 0.95; }
+/* Image Row (cards layout) */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
 
-#planBox { background: white; padding: 12px; border-radius: 6px; margin-top: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+/* Picture cards */
+.card {
+  width: 220px;
+  text-align: center;
+  background: #0d1117;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(255,255,255,0.08);
+}
 
+/* Card images */
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.10);
+}
