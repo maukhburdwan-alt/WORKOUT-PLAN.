@@ -1,74 +1,50 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title> Workout Planner</title>
-  <link rel="stylesheet" href="WORKOUT.css">
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Categories</title>
+    <link rel="stylesheet" href="WORKOUT.CSS">
 </head>
 <body>
 
-<h2> Workout Planner</h2>
-<p>MAKE YOUR WORKOUT PLAN WITH OUR HELP!</p>
+    <div class="container">
+        <h1>Choose Your Workout Category</h1>
 
-<h3>Enter Your Details</h3>
-<label>Your Name</label><br>
-<input id="name"><br><br>
+        <div class="image-row">
 
-<label>Your Goal</label><br>
-<select id="goal">
-  <option value="cardio">Cardio Patients</option>
-  <option value="fitness">General Fitness</option>
-  <option value="weightloss">Weight Loss</option>
-  <option value="muscle">Muscle Gain</option>
-  <option value="oldage">Old age</option>
-</select><br><br>
+            <!-- 1. Old Age Exercise -->
+            <div class="card">
+                <a href="https://ibb.co/RTTJRJ9y"><img src="https://i.ibb.co/r22XDXms/oldies-20251123-155822-0000.png" alt="oldies-20251123-155822-0000" height="450"></a>
+                <a href="file:///C:/Users/MAUKH/OneDrive/Desktop/workout/for_old.html" class="btn" target="_blank">Old Age Exercises</a>
+            </div>
 
-<label>Days per week</label><br>
-<select id="days">
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-</select><br><br>
+            <!-- 2. Cardio Patients -->
+            <div class="card">
+                <a href="https://ibb.co/Fkj6Pxqh"><img src="https://i.ibb.co/qLPBZyFD/oldies-20251123-160805-0000.png" alt="oldies-20251123-160805-0000" height="450"></a>
+                <a href="file:///C:/Users/MAUKH/OneDrive/Desktop/workout/for_cardio.html" class="btn" target="_blank">Cardio Patients</a>
+            </div>
 
-<button onclick="makePlan()">Generate Plan</button>
+            <!-- 3. Muscle Gain -->
+            <div class="card">
+                <a href="https://ibb.co/WWXkJdhF"><img src="https://i.ibb.co/VWGg4h1D/oldies-20251123-160321-0000.png" alt="oldies-20251123-160321-0000" height="450"></a>
+                <a href="file:///C:/Users/MAUKH/OneDrive/Desktop/workout/for_muscel.html" class="btn" target="_blank">Muscle Gain</a>
+            </div>
 
-<hr>
-<div id="planBox" style="display:none;">
-  <h3>Your Workout Plan</h3>
-  <div id="plan"></div>
-</div>
+            <!-- 4. Weight Loss -->
+            <div class="card">
+                <a href="https://ibb.co/CsD6f8FP"><img src="https://i.ibb.co/BKFG93Rn/oldies-20251123-161316-0000.png" alt="oldies-20251123-161316-0000" height="450"></a>
+                <a href="file:///C:/Users/MAUKH/OneDrive/Desktop/workout/for_weightloss.html" class="btn"target="_blank">Weight Loss</a>
+            </div>
 
-<script>
+            <!-- 5. General Fitness -->
+            <div class="card">
+                <a href="https://ibb.co/gFHFb1R1"><img src="https://i.ibb.co/sJkJpSVS/oldies-20251123-163046-0000.png" alt="oldies-20251123-163046-0000" height="450"></a>
+                <a href="file:///C:/Users/MAUKH/OneDrive/Desktop/workout/for_general_fitness.html" class="btn"target="_blank">General Fitness</a>
+            </div>
 
-const EX = {
-  cardio:["Pursed-Lip breathing", "deep diaphragmatic breathing","box breathing(4-4-4-4)","Bhramari(HUMMING BEE BREATH)"],
-  fitness:["Push-ups","Squats","Plank","Jogging"],
-  weightloss:["Jumping Jacks","Burpees","High Knees","Mountain Climbers"],
-  muscle:["Push-ups","Squats","Lunges","Dips"],
-  oldage:["small range trademil", "Tadasana(improve balance)", "Anulom vilom(calm breathing)"],
-};
-
-function makePlan(){
-  let name = document.getElementById('name').value || "Friend";
-  let goal = document.getElementById('goal').value;
-  let days = parseInt(document.getElementById('days').value);
-
-  let list = EX[goal];
-  let output = "<p><strong>Hello " + name + "</strong>, here is your plan:</p>";
-
-  for(let d=1; d<=days; d++){
-    output += "<p><strong>Day " + d + "</strong><br>";
-    output += list[0] + "<br>" + list[1] + "<br>" + list[2];
-    output += "</p>";
-  }
-
-  document.getElementById('plan').innerHTML = output;
-  document.getElementById('planBox').style.display = "block";
-}
-</script>
+        </div>
+    </div>
 
 </body>
-
 </html>
