@@ -16,16 +16,20 @@
 
 <label>Your Goal</label><br>
 <select id="goal">
+  <option value="cardio">Cardio Patients</option>
   <option value="fitness">General Fitness</option>
   <option value="weightloss">Weight Loss</option>
   <option value="muscle">Muscle Gain</option>
+  <option value="oldage">Old age</option>
 </select><br><br>
 
 <label>Days per week</label><br>
 <select id="days">
+  <option value="2">2</option>
   <option value="3">3</option>
   <option value="4">4</option>
   <option value="5">5</option>
+  <option value="6">6</option>
 </select><br><br>
 
 <button onclick="makePlan()">Generate Plan</button>
@@ -39,9 +43,11 @@
 <script>
 
 const EX = {
+  cardio:["Pursed-Lip breathing", "deep diaphragmatic breathing","box breathing(4-4-4-4)","Bhramari(HUMMING BEE BREATH)"],
   fitness:["Push-ups","Squats","Plank","Jogging"],
   weightloss:["Jumping Jacks","Burpees","High Knees","Mountain Climbers"],
-  muscle:["Push-ups","Squats","Lunges","Dips"]
+  muscle:["Push-ups","Squats","Lunges","Dips"],
+  oldage:["small range trademil", "Tadasana(improve balance)", "Anulom vilom(calm breathing)"],
 };
 
 function makePlan(){
@@ -64,4 +70,5 @@ function makePlan(){
 </script>
 
 </body>
+
 </html>
