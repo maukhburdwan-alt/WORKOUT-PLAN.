@@ -1,0 +1,60 @@
+/* Dark & Attractive CSS */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 20px;
+  background-color: #0f1214;  /* Dark background */
+  color: #e6e6e6;             /* Light text */
+}
+
+h1 {
+  text-align: center;
+  color: #4aa8ff;             /* Bright blue */
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #4aa8ff;
+  border-bottom: 2px solid #4aa8ff;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+h3 {
+  color: #73c7ff;
+  margin-top: 20px;
+}
+
+p, ul, li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+ul {
+  background: #1c1f23;        /* Dark card background */
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.04);
+}
+
+p {
+  background: #1c1f23;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.04);
+  margin: 10px 0;
+}
+
+body, ul, p {
+  line-height: 1.6;
+}
+
+/* Center container */
+.container {
+  max-width: 850px;
+  margin: auto;
+  background: #181b1f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
